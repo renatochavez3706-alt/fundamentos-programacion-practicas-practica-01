@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main(){
+float numero1, numero2, suma;
+printf("ingrese el primer numero: ");
+scanf("%f", &numero1);
+printf("ingrese el segundo numero: ");
+scanf("%f", &numero2);
+suma = numero1 + numero2;
+printf("la suma es: %.2f\n", suma);
+return 0;
+}
