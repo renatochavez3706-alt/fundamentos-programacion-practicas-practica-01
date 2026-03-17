@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main(){
+    int cantidad;
+    float total;
+
+    printf("Ingrese la cantidad de cuadernos: ");
+    scanf("%d", &cantidad);
+
+    total = cantidad * 12;
+
+    printf("El total a pagar es: %.2f Bs\n", total);
+
+    return 0;
+}
