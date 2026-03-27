@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main(){
+    float C, F, K, Ra;
+
+    printf("ingrese la temperatura en grados Celsius:\n");
+    scanf("%f", &C);
+    F = (C * 9/5) + 32;
+    K = C + 273.15;
+    Ra = (C + 273.15) * 9/5;
+    printf("temperatura en Fahrenheit: %.2f\n", F);
+    printf("temperatura en Kelvin: %.2f\n", K);
+    printf("temperatura en Rankine: %.2f\n", Ra);
+
+    return 0;
+}
