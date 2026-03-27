@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    float a, b, c, D;
+    float x1, x2, real, imag;
+
+    printf("ingrese a, b, c:\n");
+    scanf("%f %f %f", &a, &b, &c);
+
+    if(a == 0){
+        if(b == 0){
+            if(c == 0){
+                printf("infinitas soluciones\n");
+            }else{
+                printf("sin solucion\n");
+            }
+        }else{
+            x1 = -c / b;
+            printf("ecuacion lineal\n");
+            printf("x = %.2f\n", x1);
+        }
+    }else{
+        D = b*b - 4*a*c;
+
+        if(D > 0){
+            x1 = (-b + sqrt(D)) / (2*a);
+            x2 = (-b - sqrt(D)) / (2*a);
+            printf("dos soluciones reales:\n");
+            printf("x1 = %.2f\n", x1);
+            printf("x2 = %.2f\n", x2);
+
+        }else if(D == 0){
+            x1 = -b / (2*a);
+            printf("una solucion doble:\n");
+            printf("x = %.2f\n", x1);
+
+        }else{
+            real = -b / (2*a);
+            imag = sqrt(-D) / (2*a);
+            printf("soluciones complejas:\n");
+            printf("x1 = %.2f + %.2fi\n", real, imag);
+            printf("x2 = %.2f - %.2fi\n", real, imag);
+        }
+    }
+
+    return 0;
+}
